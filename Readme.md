@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Alina Melikhova](https://up.htmlacademy.ru/htmlcss/34/user/1801599).
-* Наставник: `Виктория Никитина`.
+* Наставник: [Виктория Никитина] (https://github.com/vikitina)
 
 ---
 
