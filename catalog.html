@@ -223,7 +223,7 @@
           </li>
         </ul>
 
-        <div class="hotel-list-footer">
+        <div class="hotel-list-footer-pagination">
           <ul class="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-current">1</a>
@@ -244,6 +244,9 @@
               <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
+          </div>
+
+          <div class="hotel-list-footer-selection">
           <label
             >Гостиниц на странице:
             <select class="select-control">
@@ -251,6 +254,23 @@
             </select>
           </label>
         </div>
+      </section>
+
+      <section class="subscription subscription-catalog">
+        <h2 class="sudscription-title">Подпишитесь на рассылку</h2>
+        <p class="subscription-description">
+          Только полезная информация и никакого спама, честное бойскаутское!
+        </p>
+        <form
+          class="subscription-form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <input type="email" name="email" placeholder="Ваш e-mail" />
+          <button class="button subscription-button" type="submit">
+            Подписаться
+          </button>
+        </form>
       </section>
     </main>
 
