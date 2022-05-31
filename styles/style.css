@@ -47,10 +47,11 @@ body {
 
 .navigation-link {
   font-size: 20px;
+  line-height: 26px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   background: #FFFFFF;
   color: #000000;
 }
@@ -103,14 +104,13 @@ body {
 .advantages-item {
   text-align: center;
   list-style-type: none;
-  color: #000000;
 }
 
 .advantages-title {
-  text-transform: uppercase;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -126,24 +126,33 @@ body {
   color: #333333;
 }
 
-.advantages-item-with-photo {
+.advantages-block-with-photo {
   background-color: #82B3D3;
-}
-
-.white-text {
   color: #FFFFFF;
 }
 
-.light-blue {
+.advantages-block-with-photo .advantages-title {
+  color:#FFFFFF;
+}
+
+.advantages-block-with-photo .advantages-number {
+  color:#FFFFFF;
+}
+
+.advantages-block-with-photo .advantages-description {
+  color:#FFFFFF;
+}
+
+.advantages-block-light-blue {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.blue {
-  background-color: rgba(131, 179, 211, 0.2);
+.advantages-block-white {
+  background-color: #FFFFFF;
 }
 
-.white {
-  background-color: #FFFFFF;
+.advantages-block-blue {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .interested {
@@ -170,6 +179,10 @@ body {
   font-size: 20px;
   line-height: 36px;
   background-color: #756157;
+}
+
+.subscription {
+  text-align: center;
 }
 
 .subscription-page {
@@ -204,6 +217,10 @@ body {
   color: #000000;
 }
 
+.footer-social-item {
+  list-style-type: none;
+}
+
 .footer-phone {
   font-size: 40px;
   line-height: 40px;
@@ -211,3 +228,154 @@ body {
   color: #000000;
 }
 
+.catalog-header {
+  background-image: url("/images/filter-background.jpg");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #FFFFFF;
+}
+
+.catalog-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: capitalize;
+}
+
+.catalog-filter-item {
+  list-style-type: none;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button-catalog-apply {
+  background-color: #82B3D3;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.catalog-filter-reset {
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.catalog-hotel {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.catalog-hotel-descriprion {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.catalog-hotel-select {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-item {
+  list-style-type: none;
+}
+
+.hotel-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.hotel-description {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.button-hotel-description {
+  background: #756157;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-favourites {
+  background: #82B3D3;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hotel-stars {
+  background-image: url("/images/star.svg");
+  background-repeat: repeat-x;
+}
+
+.hotel-rating {
+  background: #F2F2F2;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.pagination-link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
+.pagination-link.pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-item {
+  list-style-type: none;
+}
+
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-list-footer-selection {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.subscription.subscription-catalog {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+.sudscription-title.sudscription-title-catalog {
+  color: #000000;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header class="page-header">
@@ -71,7 +71,7 @@
             method="get"
           >
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Инфраструктура</legend>
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
@@ -109,7 +109,7 @@
             </fieldset>
 
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья</legend>
+              <legend class="catalog-filter-title">Тип жилья:</legend>
               <ul class="catalog-filter-item">
                 <li class="catalog-filter-item">
                   <label class="control">
@@ -120,7 +120,7 @@
                       value="hotel"
                       checked
                     />
-                    Отели
+                    Гостиница
                   </label>
                 </li>
                 <li class="catalog-filter-item">
@@ -131,7 +131,7 @@
                       name="accomodation-type"
                       value="motel"
                     />
-                    Мотели
+                    Мотель
                   </label>
                 </li>
                 <li class="catalog-filter-item">
@@ -183,7 +183,7 @@
               <img
                 class="hotel-img"
                 src="images/hotel-1-amara.jpg"
-                alt=""
+                alt="Вид на звездное небо из расщелины."
                 width="300"
                 height="211"
               />
@@ -191,10 +191,10 @@
             <h3 class="hotel-title">Amara Resort & Spa</h3>
             <p class="hotel-description">Гостиница</p>
             <p class="hotel-price">От 4000 ₽</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button button-hotel-description" href="#">Подробнее</a>
             <a class="button button-favourites" href="#"> в избранное </a>
             <span class="hotel-stars"></span>
-            <span class="visualy-hidden">Количество звезд у отеля</span>
+            <span class="visually-hidden">Количество звезд у отеля</span>
             <span class="hotel-rating">Рейтинг: 8,5</span>
           </li>
 
@@ -203,7 +203,7 @@
               <img
                 class="hotel-img"
                 src="images/hotel-2-villas.jpg"
-                alt=""
+                alt="Вид на горы и радугу."
                 width="300"
                 height="211"
               />
@@ -211,12 +211,12 @@
             <h3 class="hotel-title">Villas at Poco Diablo</h3>
             <p class="hotel-description">Гостиница</p>
             <p class="hotel-price">От 5000 ₽</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button button-hotel-description" href="#">Подробнее</a>
             <a class="button button-favourites button-favourits-added" href="#">
               в избранное
             </a>
             <span class="hotel-stars"></span>
-            <span class="visualy-hidden">Количество звезд у отеля</span>
+            <span class="visually-hidden">Количество звезд у отеля</span>
             <span class="hotel-rating">Рейтинг: 9,2</span>
           </li>
 
@@ -225,7 +225,7 @@
               <img
                 class="hotel-img"
                 src="images/hotel-3-desert.jpg"
-                alt=""
+                alt="Вид на самую большую гору."
                 width="300"
                 height="211"
               />
@@ -233,10 +233,10 @@
             <h3 class="hotel-title">Desert Quail Inn</h3>
             <p class="hotel-description">Гостиница</p>
             <p class="hotel-price">От 2500 ₽</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button button-hotel-description" href="#">Подробнее</a>
             <a class="button button-favourites" href="#"> в избранное </a>
             <span class="hotel-stars"></span>
-            <span class="visualy-hidden">Количество звезд у отеля</span>
+            <span class="visually-hidden">Количество звезд у отеля</span>
             <span class="hotel-rating">Рейтинг: 6,9</span>
           </li>
           <li class="hotel-item">
@@ -244,7 +244,7 @@
               <img
                 class="hotel-img"
                 src="images/hotel-4-greentree.jpg"
-                alt=""
+                alt="Вид на каньон перед рассветом."
                 width="300"
                 height="211"
               />
@@ -252,10 +252,10 @@
             <h3 class="hotel-title">GreenTree Inn</h3>
             <p class="hotel-description">Гостиница</p>
             <p class="hotel-price">От 1500 ₽</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button button-hotel-description" href="#">Подробнее</a>
             <a class="button button-favourites" href="#"> в избранное </a>
             <span class="hotel-stars"></span>
-            <span class="visualy-hidden">Количество звезд у отеля</span>
+            <span class="visually-hidden">Количество звезд у отеля</span>
             <span class="hotel-rating">Рейтинг: 5,0</span>
           </li>
         </ul>
@@ -295,7 +295,7 @@
     </main>
     <footer class="page-footer">
       <section class="subscription subscription-catalog">
-        <h2 class="sudscription-title">Подпишитесь на рассылку</h2>
+        <h2 class="sudscription-title sudscription-title-catalog">Подпишитесь на рассылку</h2>
         <p class="subscription-description">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
@@ -340,7 +340,15 @@
       </section>
       <section>
         <h2 class="visually-hidden">Кем сделан сайт</h2>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/"></a>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+          <img
+            class="copyright-image"
+            src="/images/academy-logo.svg"
+            alt="Лого HTML Academy."
+            width="115"
+            height="34"
+          />
+        </a>
       </section>
     </footer>
   </body>
