@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -29,7 +29,7 @@ body {
   text-decoration: none;
   text-align: center;
   color: #FFFFFF;
-
+  cursor: pointer;
 }
 
 .page-header {
@@ -63,7 +63,7 @@ body {
 }
 
 .promo-image {
-  background-image: url("/images/promo-background.jpg");
+  background-image: url("../images/promo-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   text-align: center;
@@ -73,7 +73,7 @@ body {
 
 
 .promo-image-bottom {
-  background-image: url("/images/promo-image-triangles.svg");
+  background-image: url("../images/promo-image-triangles.svg");
   background-size: auto auto;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -90,14 +90,9 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  background-color: #FFFFFF;
-  color: #000000;
 }
 
 .promo-description {
-  font-size: 22px;
-  line-height: 26px;
-  background-color: #FFFFFF;
   color: #333333;
 }
 
@@ -170,8 +165,6 @@ body {
 }
 
 .interested-description {
-  font-size: 22px;
-  line-height: 26px;
   color: #333333;
 }
 
@@ -188,7 +181,7 @@ body {
 .subscription-page {
   background-color: #333333;
   color: #FFFFFF;
-  background-image: url("/images/subscription-background.jpg");
+  background-image: url("../images/subscription-background.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   text-align: center;
@@ -199,11 +192,6 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-}
-
-.subscription-description {
-  font-size: 22px;
-  line-height: 26px;
 }
 
 .subscription-button {
@@ -229,7 +217,7 @@ body {
 }
 
 .catalog-header {
-  background-image: url("/images/filter-background.jpg");
+  background-image: url("../images/filter-background.jpg");
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -327,7 +315,7 @@ body {
 }
 
 .hotel-stars {
-  background-image: url("/images/star.svg");
+  background-image: url("../images/star.svg");
   background-repeat: repeat-x;
 }
 
