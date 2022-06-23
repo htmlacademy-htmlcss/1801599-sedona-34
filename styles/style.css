@@ -60,6 +60,15 @@ body {
   cursor: pointer;
 }
 
+.button-small {
+  display: block;
+  margin: 0;
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+}
+
 /* Шапка */
 
 .page-header {
@@ -107,7 +116,6 @@ body {
   list-style-type: none;
 }
 
-
 .navigation-link {
   display: block;
   padding: 20px 17px;
@@ -122,6 +130,7 @@ body {
 }
 
 .navigation-button {
+  min-width: 130px;
   background: #756157;
   font-size: 16px;
   line-height: 20px;
@@ -331,6 +340,9 @@ body {
 }
 
 .interested-button {
+  display: inline-block;
+  padding: 12px 15px;
+  min-width: 544px;
   font-size: 20px;
   line-height: 36px;
   background-color: #756157;
@@ -376,6 +388,11 @@ body {
 }
 
 .subscription-button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 12px 15px;
+  min-width: 200px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82B3D3;
@@ -524,16 +541,27 @@ body {
 }
 
 .button-catalog-apply {
+  display: inline-block;
+  padding: 14px 15px;
+  margin-bottom: 20px;
+  min-width: 160px;
   background-color: #82B3D3;
   font-size: 16px;
   line-height: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .catalog-filter-reset {
+  display: inline-block;
   background-color: transparent;
+  padding: 0;
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+  border: none;
+  cursor: pointer;
 }
 
 /* Карточки каталога */
@@ -605,6 +633,7 @@ body {
 
 .hotel-item-bottom {
   display: grid;
+  align-items: center;
   grid-template-columns: 140px 140px;
   gap: 16px 20px;
 }
@@ -642,6 +671,8 @@ body {
 }
 
 .hotel-rating {
+  display: inline-block;
+  padding: 8px 22px;
   background: #F2F2F2;
   font-size: 16px;
   line-height: 20px;
