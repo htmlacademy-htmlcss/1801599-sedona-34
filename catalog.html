@@ -20,14 +20,16 @@
             />
           </a>
           <ul class="navigation-list">
-            <li class="navigation-item navigation-item-current">
+            <li class="navigation-item">
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link navigation-link-current" href="catalog.html"
+                >Гостиницы</a
+              >
             </li>
           </ul>
           <ul class="navigation-list navigation-list-icons">
@@ -72,7 +74,7 @@
             </li>
             <li class="navigation-icon">
               <a class="navigation-link-icon" href="#">
-                <span class="button navigation-button button-small"
+                <span class="button navigation-button button-small button-brown"
                   >Хочу сюда!</span
                 >
               </a>
@@ -88,6 +90,19 @@
             <ol class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
+                  <svg
+                    width="13"
+                    height="13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="m.16 6.15 6-5.5 6 5.5v6.2h-12v-6.2Zm1 .4v4.8h10v-4.8l-5-4.5-5 4.5Zm4 3.8h-1v-3.5h4v3.5h-1v-2.5h-2v2.5Z"
+                      fill="#fff"
+                    />
+                  </svg>
                   <span class="visually-hidden">На главную</span>
                 </a>
               </li>
@@ -181,7 +196,10 @@
                   </ul>
                 </fieldset>
                 <div class="catalog-filter-buttons-wrapper">
-                  <button class="button button-catalog-apply" type="submit">
+                  <button
+                    class="button button-catalog-apply button-blue"
+                    type="submit"
+                  >
                     Применить
                   </button>
                   <input
@@ -202,17 +220,49 @@
             <select class="catalog-hotel-select" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые</option>
             </select>
-
             <a
               href="#"
-              class="catalog-hotel-preview catalog-hotel-preview-selected"
+              class="catalog-grid-toggler catalog-grid-toggler-selected"
             >
+              <svg
+                width="16"
+                height="14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"
+                  fill="#000"
+                />
+              </svg>
               <span class="visually-hidden">Показать карточки</span>
             </a>
-            <a class="catalog-hotel-preview" href="#">
+            <a class="catalog-grid-toggler" href="#">
+              <svg
+                width="16"
+                height="14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"
+                  fill="#000"
+                />
+              </svg>
               <span class="visually-hidden">Показать по одному</span>
             </a>
-            <a class="catalog-hotel-preview" href="#">
+            <a class="catalog-grid-toggler" href="#">
+              <svg
+                width="16"
+                height="14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"
+                  fill="#000"
+                />
+              </svg>
               <span class="visually-hidden">Показать список</span>
             </a>
           </div>
@@ -232,13 +282,18 @@
               <div class="hotel-item-bottom">
                 <p class="hotel-description">Гостиница</p>
                 <p class="hotel-price">От 4000 ₽</p>
-                <a class="button button-hotel-description button-small" href="#"
+                <a
+                  class="button button-hotel-description button-small button-brown"
+                  href="#"
                   >Подробнее</a
                 >
-                <a class="button button-favourites button-small" href="#">
+                <a
+                  class="button button-favourites button-small button-blue"
+                  href="#"
+                >
                   в избранное
                 </a>
-                <span class="hotel-stars"></span>
+                <span class="hotel-stars hotel-stars-four"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 8,5</span>
               </div>
@@ -258,7 +313,9 @@
               <div class="hotel-item-bottom">
                 <p class="hotel-description">Гостиница</p>
                 <p class="hotel-price">От 5000 ₽</p>
-                <a class="button button-hotel-description button-small" href="#"
+                <a
+                  class="button button-hotel-description button-small button-brown"
+                  href="#"
                   >Подробнее</a
                 >
                 <a
@@ -267,7 +324,7 @@
                 >
                   в избранном
                 </a>
-                <span class="hotel-stars"></span>
+                <span class="hotel-stars hotel-stars-four"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 9,2</span>
               </div>
@@ -287,13 +344,18 @@
               <div class="hotel-item-bottom">
                 <p class="hotel-description">Гостиница</p>
                 <p class="hotel-price">От 2500 ₽</p>
-                <a class="button button-hotel-description button-small" href="#"
+                <a
+                  class="button button-hotel-description button-small button-brown"
+                  href="#"
                   >Подробнее</a
                 >
-                <a class="button button-favourites button-small" href="#">
+                <a
+                  class="button button-favourites button-small button-blue"
+                  href="#"
+                >
                   в избранное
                 </a>
-                <span class="hotel-stars"></span>
+                <span class="hotel-stars hotel-stars-three"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 6,9</span>
               </div>
@@ -312,13 +374,18 @@
               <div class="hotel-item-bottom">
                 <p class="hotel-description">Гостиница</p>
                 <p class="hotel-price">От 1500 ₽</p>
-                <a class="button button-hotel-description button-small" href="#"
+                <a
+                  class="button button-hotel-description button-small button-brown"
+                  href="#"
                   >Подробнее</a
                 >
-                <a class="button button-favourites button-small" href="#">
+                <a
+                  class="button button-favourites button-small button-blue"
+                  href="#"
+                >
                   в избранное
                 </a>
-                <span class="hotel-stars"></span>
+                <span class="hotel-stars hotel-stars-two"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 5,0</span>
               </div>
@@ -375,7 +442,7 @@
               method="post"
             >
               <input type="email" name="email" placeholder="Ваш e-mail" />
-              <button class="button subscription-button" type="submit">
+              <button class="button subscription-button button-blue" type="submit">
                 Подписаться
               </button>
             </form>
@@ -389,10 +456,11 @@
               <ul class="footer-social-list">
                 <li class="footer-social-item">
                   <a
-                    class="footer-social-icon"
+                    class="footer-social-link"
                     href="https://vk.com/htmlacademy"
                   >
                     <svg
+                      class="footer-social-icon"
                       width="25"
                       height="14"
                       viewBox="0 0 25 14"
@@ -410,8 +478,9 @@
                   </a>
                 </li>
                 <li class="footer-social-item">
-                  <a class="footer-social-icon" href="https://t.me/htmlacademy">
+                  <a class="footer-social-link" href="https://t.me/htmlacademy">
                     <svg
+                      class="footer-social-icon"
                       width="18"
                       height="16"
                       viewBox="0 0 18 16"
@@ -428,10 +497,11 @@
                 </li>
                 <li class="footer-social-item">
                   <a
-                    class="footer-social-icon"
+                    class="footer-social-link"
                     href="https://www.youtube.com/user/htmlacademyru"
                   >
                     <svg
+                      class="footer-social-icon"
                       width="20"
                       height="14"
                       fill="none"
