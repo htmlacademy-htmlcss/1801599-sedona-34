@@ -94,6 +94,42 @@ body {
   background-color: #6C9E42;
 }
 
+.page-select {
+  margin: 0;
+  padding: 0;
+  height: 49px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: inherit;
+  vertical-align: center;
+  color: #333333;
+  background-image: url("../images/selector-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  background-size: 12px;
+  cursor: pointer;
+  outline-style: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.page-select:hover,
+.page-select:focus {
+  border-color: #68A2CA;
+}
+
+.page-select:active {
+  border-color: #3F5E72;
+}
+
+.page-select:disabled {
+  border-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* Шапка */
 
 .page-header {
@@ -486,7 +522,48 @@ body {
 }
 
 .subscription-form {
+  display: flex;
   margin: 0 auto;
+}
+
+.subscription-email {
+  margin: 0;
+  padding: 20px 0 20px 22px;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  flex-grow: 1;
+  background: #F2F2F2;
+  color: #000000;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.subscription-email::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.subscription-email::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.subscription-email:hover {
+  background: #E6E6E6;
+  color: #000000;
+}
+
+.subscription-email:focus {
+  background: #E6E6E6;
+  color: #000000;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline-style: none;
+}
+
+.subscription-email:active {
+  background: #FFFFFF;
+  color: #000000;
 }
 
 .subscription-button {
@@ -498,6 +575,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   background-color: #82B3D3;
+  border-radius: 0px 10px 10px 0px;
 }
 
 /* Футер страницы */
@@ -641,6 +719,7 @@ body {
   margin: 0;
   padding: 0;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .breadcrumbs-link:hover,
@@ -668,13 +747,17 @@ body {
 .catalog-filter-form {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
 }
 
 .catalog-filter-group {
   margin: 0;
+  margin-right: 70px;
   padding: 0;
   border: none;
+}
+
+.catalog-filter-form .catalog-filter-group:last-of-type {
+  margin-left: auto;
 }
 
 .catalog-filter-title {
@@ -693,10 +776,12 @@ body {
 }
 
 .catalog-filter-item {
+  position: relative;
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
   list-style-type: none;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
@@ -705,10 +790,208 @@ body {
   margin: 0;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.control-mark{
+  position: absolute;
+  display: block;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline-style: none;
+}
+
+.control:focus {
+  outline-style: none;
+}
+
+.control:active .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;;
+  left: 0;
+  background-image: url("../images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  content: "";
+}
+
+.control-input[type="radio"]:checked + .control-mark::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;;
+  left: 5px;
+  top: 5px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+
+.range-input {
+  margin: 0;
+  padding: 0;
+  padding-left: 17px;
+  width: 144px;
+  height: 48px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  outline-style: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus {
+  box-shadow: 0px 0px 0px 3px #81B3D2 inset,
+  0px 0px 0px 3px #81B3D2;
+}
+
+.range-input:active {
+  background: #756257;
+}
+
+
+.range-input-left {
+  border-right: 1px solid #FFFFFF;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.range-input-right {
+  border-left: 1px solid #FFFFFF;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.range-wrapper-inputs::before {
+  position: absolute;
+  content: "от";
+  color: #FFFFFF;
+  opacity: 0.3;
+  left: 110px;
+  right: 13px;
+  top: 12px;
+  bottom: 15px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.range-wrapper-inputs::after {
+  position: absolute;
+  content: "до";
+  color: #FFFFFF;
+  opacity: 0.3;
+  left: 251px;
+  right: 17px;
+  top: 12px;
+  bottom: 15px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.range-scale {
+  position: relative;
+  width: 288px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: relative;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.range-toggle:focus {
+  box-shadow: 0px 0px 0 3px #83B3D3;
+  outline-style: none;
+}
+
+.range-toggle:active {
+  box-shadow: 0px 0px 0 2px #83B3D3;
+}
+
+.toggle-min{
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
 .catalog-filter-buttons-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  margin-top: 58px;
 }
 
 .button-catalog-apply {
@@ -734,6 +1017,19 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.catalog-filter-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* .catalog-filter-reset:focus {
+  color: #FFFFFF;
+  width: 96px;
+  height: 26px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline-style: none;
+} */
 
 .catalog-filter-reset:active {
   color: rgba(255, 255, 255, 0.3);
@@ -763,9 +1059,10 @@ body {
 
 .catalog-hotel-select {
   margin-left: auto;
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
+  margin-right: 78px;
+  padding-right: 126px;
+  padding-left: 17px;
+
 }
 
 .catalog-grid-toggler {
@@ -957,10 +1254,17 @@ body {
   color: #000000;
 }
 
+.selection-description {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
 .select-control {
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
+  margin-left: 51px;
+  padding-right: 127px;
+  padding-left: 17px;
 }
 
 .hotel-list-footer-selection {

@@ -27,7 +27,9 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="catalog.html"
+              <a
+                class="navigation-link navigation-link-current"
+                href="catalog.html"
                 >Гостиницы</a
               >
             </li>
@@ -124,33 +126,35 @@
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input
-                          class="control-input-checkbox"
+                          class="visually-hidden control-input"
                           type="checkbox"
                           name="pool"
                           checked
                         />
-                        Бассейн
-                      </label>
+                        <span class="control-mark"></span>
+                      <span>Бассейн</span></label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input
-                          class="control-input-checkbox"
+                          class="visually-hidden control-input"
                           type="checkbox"
                           name="parking"
                           checked
                         />
-                        Парковка
+                        <span class="control-mark"></span>
+                        <span>Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input
-                          class="control-input-checkbox"
+                          class="visually-hidden control-input"
                           type="checkbox"
                           name="wifi"
                         />
-                        Wi-Fi
+                        <span class="control-mark"></span>
+                        <span>Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -162,38 +166,61 @@
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input
-                          class="сontrol-input-radio"
+                          class="visually-hidden control-input"
                           type="radio"
                           name="accomodation-type"
                           value="hotel"
                           checked
                         />
-                        Гостиница
+                        <span class="control-mark"></span>
+                        <span>Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input
-                          class="сontrol-input-radio"
+                          class="visually-hidden control-input"
                           type="radio"
                           name="accomodation-type"
                           value="motel"
                         />
-                        Мотель
-                      </label>
+                        <span class="control-mark"></span>
+                      <span>Мотель</span></label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input
-                          class="сontrol-input-radio"
+                          class="visually-hidden control-input"
                           type="radio"
                           name="accomodation-type"
                           value="appartment"
                         />
-                        Аппартаменты
-                      </label>
+                        <span class="control-mark"></span>
+                        <span>Аппартаменты</span></label>
                     </li>
                   </ul>
+                </fieldset>
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Стоимость, ₽:
+                  </legend>
+                    <div class="range-wrapper-inputs">
+                      <label class="catalog-filter-label">
+                        <input class="range-input range-input-left" type="number" value="0" name="min-price">
+                      </label>
+                      <label class="catalog-filter-label">
+                        <input class="range-input range-input-right" type="number" value="9000" name="max-price">
+                    </div>
+                  <div class="range">
+                    <div class="range-scale">
+                      <div class="range-bar" style="left: 0px; width: 228px">
+                        <button class="range-toggle toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range-toggle toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
                 </fieldset>
                 <div class="catalog-filter-buttons-wrapper">
                   <button
@@ -217,8 +244,9 @@
           <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
           <div class="catalog-hotel-header">
             <b class="catalog-hotel-descriprion">Найдено гостиниц: 38</b>
-            <select class="catalog-hotel-select" aria-label="Сортировка">
+            <select class="page-select catalog-hotel-select" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые</option>
+              <option value="cheap">Сначала дорогие</option>
             </select>
             <a
               href="#"
@@ -416,10 +444,11 @@
             </div>
 
             <div class="hotel-list-footer-selection">
-              <label
-                >Гостиниц на странице:
-                <select class="select-control">
+              <label class="selection-description"
+                >Гостиниц на странице:<select class="page-select select-control">
                   <option value="4">4</option>
+                  <option value="4">6</option>
+                  <option value="4">8</option>
                 </select>
               </label>
             </div>
@@ -441,8 +470,16 @@
               action="https://echo.htmlacademy.ru/"
               method="post"
             >
-              <input type="email" name="email" placeholder="Ваш e-mail" />
-              <button class="button subscription-button button-blue" type="submit">
+              <input
+                class="subscription-email"
+                type="email"
+                name="email"
+                placeholder="Ваш e-mail"
+              />
+              <button
+                class="button subscription-button button-blue"
+                type="submit"
+              >
                 Подписаться
               </button>
             </form>
