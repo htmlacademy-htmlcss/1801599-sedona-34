@@ -132,7 +132,8 @@
                           checked
                         />
                         <span class="control-mark"></span>
-                      <span>Бассейн</span></label>
+                        <span>Бассейн</span></label
+                      >
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
@@ -185,7 +186,8 @@
                           value="motel"
                         />
                         <span class="control-mark"></span>
-                      <span>Мотель</span></label>
+                        <span>Мотель</span></label
+                      >
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
@@ -196,31 +198,47 @@
                           value="appartment"
                         />
                         <span class="control-mark"></span>
-                        <span>Аппартаменты</span></label>
+                        <span>Аппартаменты</span></label
+                      >
                     </li>
                   </ul>
                 </fieldset>
                 <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title">Стоимость, ₽:
-                  </legend>
-                    <div class="range-wrapper-inputs">
-                      <label class="catalog-filter-label">
-                        <input class="range-input range-input-left" type="number" value="0" name="min-price">
-                      </label>
-                      <label class="catalog-filter-label">
-                        <input class="range-input range-input-right" type="number" value="9000" name="max-price">
-                    </div>
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      <input
+                        class="range-input range-input-left"
+                        type="number"
+                        value="0"
+                        name="min-price"
+                      />
+                    </label>
+                    <label class="catalog-filter-label">
+                      <input
+                        class="range-input range-input-right"
+                        type="number"
+                        value="9000"
+                        name="max-price"
+                      />
+                    </label>
+                  </div>
                   <div class="range">
                     <div class="range-scale">
                       <div class="range-bar" style="left: 0px; width: 228px">
                         <button class="range-toggle toggle-min">
-                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                          <span class="visually-hidden"
+                            >Изменить минимальную цену.</span
+                          >
                         </button>
                         <button class="range-toggle toggle-max">
-                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                          <span class="visually-hidden"
+                            >Изменить максимальную цену.</span
+                          >
                         </button>
                       </div>
                     </div>
+                  </div>
                 </fieldset>
                 <div class="catalog-filter-buttons-wrapper">
                   <button
@@ -244,7 +262,10 @@
           <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
           <div class="catalog-hotel-header">
             <b class="catalog-hotel-descriprion">Найдено гостиниц: 38</b>
-            <select class="page-select catalog-hotel-select" aria-label="Сортировка">
+            <select
+              class="page-select catalog-hotel-select"
+              aria-label="Сортировка"
+            >
               <option value="cheap">Сначала дешевые</option>
               <option value="cheap">Сначала дорогие</option>
             </select>
@@ -445,7 +466,9 @@
 
             <div class="hotel-list-footer-selection">
               <label class="selection-description"
-                >Гостиниц на странице:<select class="page-select select-control">
+                >Гостиниц на странице:<select
+                  class="page-select select-control"
+                >
                   <option value="4">4</option>
                   <option value="4">6</option>
                   <option value="4">8</option>
@@ -586,6 +609,83 @@
           </div>
         </section>
       </footer>
+    </div>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">поиск гостиницы в седоне</h2>
+
+          <form
+            class="search-form"
+            action="https://echo.htmlacademy.ru/"
+            method="get"
+          >
+            <div class="field-group">
+              <label class="modal-label" for="search-checkin"
+                >Дата Заезда:</label
+              >
+              <div class="modal-field-wrapper">
+                <input
+                  class="search-form-field search-form-field-date"
+                  type="date"
+                  id="search-checkin"
+                  name="search-checkin"
+                  placeholder="Укажите дату"
+                  value="27 апреля 2020"
+                />
+                <span class="modal-message modal-warning"
+                  >Мы не можем отправить вас в прошлое.</span
+                >
+              </div>
+            </div>
+            <div class="field-group">
+              <label class="modal-label" for="search-checkin"
+                >Дата Выезда:</label
+              >
+              <div class="modal-field-wrapper">
+                <input
+                  class="search-form-field search-form-field-date"
+                  type="date"
+                  id="search-checkin"
+                  name="search-checkin"
+                  placeholder="Укажите дату"
+                  value="1 сентября 2021"
+                />
+                <span class="modal-message"
+                  >На эти даты есть свободные номера. Пока есть.</span
+                >
+              </div>
+            </div>
+            <div class="field-group">
+              <label class="modal-label" for="search-adults">Взрослые:</label>
+              <input
+                class="search-form-field"
+                type="number"
+                id="search-adults"
+                name="search-adults"
+                value="2"
+              />
+            </div>
+            <div class="field-group">
+              <label class="modal-label" for="search-kids">Дети:</label>
+              <span class="modal-information"></span>
+              <input
+                class="search-form-field"
+                type="number"
+                id="search-kids"
+                name="search-kids"
+                value="1"
+              />
+            </div>
+            <button class="button button-blue search-form-button" type="submit">
+              найти
+            </button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
