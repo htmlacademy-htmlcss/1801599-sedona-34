@@ -447,19 +447,19 @@
                   <a class="pagination-link pagination-current">1</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">2</a>
+                  <a class="pagination-link button-blue" href="#">2</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
+                  <a class="pagination-link button-blue" href="#">3</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">4</a>
+                  <a class="pagination-link button-blue" href="#">4</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">...</a>
+                  <a class="pagination-link button-blue" href="#">...</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">10</a>
+                  <a class="pagination-link button-blue" href="#">10</a>
                 </li>
               </ul>
             </div>
@@ -614,6 +614,17 @@
       <div class="modal modal-search">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
+          <svg
+            class="close-button-cross"
+            viewBox="0 0 13 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"
+              fill="#000"
+            />
+          </svg>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">поиск гостиницы в седоне</h2>
@@ -630,7 +641,7 @@
               <div class="modal-field-wrapper">
                 <input
                   class="search-form-field search-form-field-date"
-                  type="date"
+                  type="text"
                   id="search-checkin"
                   name="search-checkin"
                   placeholder="Укажите дату"
@@ -648,7 +659,7 @@
               <div class="modal-field-wrapper">
                 <input
                   class="search-form-field search-form-field-date"
-                  type="date"
+                  type="text"
                   id="search-checkin"
                   name="search-checkin"
                   placeholder="Укажите дату"
@@ -659,26 +670,84 @@
                 >
               </div>
             </div>
-            <div class="field-group">
-              <label class="modal-label" for="search-adults">Взрослые:</label>
-              <input
-                class="search-form-field"
-                type="number"
-                id="search-adults"
-                name="search-adults"
-                value="2"
-              />
-            </div>
-            <div class="field-group">
-              <label class="modal-label" for="search-kids">Дети:</label>
-              <span class="modal-information"></span>
-              <input
-                class="search-form-field"
-                type="number"
-                id="search-kids"
-                name="search-kids"
-                value="1"
-              />
+            <div class="field-group-number-wrapper">
+              <div class="field-group">
+                <label class="modal-label" for="search-adults">Взрослые:</label>
+                <div class="input-number-wrapper">
+                  <button
+                    class="search-form-svg-wrapper search-form-svg-wrapper-minus"
+                  >
+                    <svg
+                      class="search-form-svg"
+                      viewBox="0 0 13 1"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0v1h13V0H0Z" fill="#000" />
+                    </svg>
+                  </button>
+                  <input
+                    class="search-form-field search-form-field-number"
+                    type="number"
+                    id="search-adults"
+                    name="search-adults"
+                    value="2"
+                  />
+                  <button
+                    class="search-form-svg-wrapper search-form-svg-wrapper-plus"
+                  >
+                    <svg
+                      class="search-form-svg"
+                      viewBox="0 0 13 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="field-group">
+                <label
+                  class="modal-label modal-label-with-information"
+                  for="search-kids"
+                  >Дети:
+                  <span class="modal-information"></span>
+                </label>
+                <div class="input-number-wrapper">
+                  <button
+                    class="search-form-svg-wrapper search-form-svg-wrapper-minus"
+                  >
+                    <svg
+                      class="search-form-svg"
+                      viewBox="0 0 13 1"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0v1h13V0H0Z" fill="#000" />
+                    </svg>
+                  </button>
+                  <input
+                    class="search-form-field search-form-field-number"
+                    type="number"
+                    id="search-kids"
+                    name="search-kids"
+                    value="1"
+                  />
+                  <button
+                    class="search-form-svg-wrapper search-form-svg-wrapper-plus"
+                  >
+                    <svg
+                      class="search-form-svg"
+                      viewBox="0 0 13 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
             <button class="button button-blue search-form-button" type="submit">
               найти
