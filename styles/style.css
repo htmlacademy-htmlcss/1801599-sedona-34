@@ -970,6 +970,7 @@ body {
   height: 20px;
   background: #FFFFFF;
   border-radius: 5px;
+  border: none;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1288,6 +1289,7 @@ body {
 }
 
 /* Модальное окно */
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -1297,6 +1299,10 @@ body {
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
   z-index: 2;
+}
+
+.modal-container-close {
+  display: none;
 }
 
 .modal {
@@ -1345,7 +1351,7 @@ body {
 }
 
 .modal-close-button:active path {
-  fill:rgba(0, 0, 0, 0.3);
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .modal-title {
@@ -1373,6 +1379,7 @@ body {
   margin: 0;
   padding: 12px 18px 12px 0;
   width: 155px;
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -1411,11 +1418,11 @@ body {
 
 .search-form-field::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
- }
+}
 
- .search-form-field::-moz-placeholder {
+.search-form-field::-moz-placeholder {
   color: rgba(0, 0, 0, 0.6);
- }
+}
 
 .search-form-field-date {
   flex-grow: 1;
@@ -1428,8 +1435,8 @@ body {
 }
 
 .search-form-field-date:hover,
-.search-form-field-date:focus-visible {
-  background: #E6E6E6;
+.search-form-field-date:focus {
+  background-color: #E6E6E6;
 }
 
 .search-form-field-date:focus-visible {
@@ -1458,53 +1465,62 @@ body {
   display: flex;
 }
 
-.search-form-svg-wrapper {
+.input-number-button {
   position: absolute;
-  top: 15px;
+  width: 42px;
+  height: 50px;
+  top: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.input-number-button-minus {
+  left: 0;
+  padding-left: 16px;
+}
+
+.input-number-button-plus {
+  right: 0;
+  padding-right: 16px;
+  text-align: right;
+}
+
+.search-form-svg-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border-radius: 2px;
   border: none;
   background-color: transparent;
-  cursor: pointer;
   margin: 0;
   padding: 0;
 }
 
-.search-form-svg-wrapper-minus {
-  left: 16px;
-}
-
-.search-form-svg-wrapper-plus{
-  right: 16px;
-}
-
 .search-form-svg {
-  position: absolute;
-  display: block;
+  display: inline-block;
   width: 13px;
   height: 13px;
-  top: 3px;
-  bottom: 3px;
-  left: 3px;
 }
 
-.search-form-svg path{
+.search-form-svg path {
   fill: rgba(0, 0, 0, 0.3);
 }
 
-.search-form-svg:hover path,
-.search-form-svg:focus path{
+.input-number-button:hover path,
+.input-number-button:focus path {
   fill: #000000;
 }
 
-.search-form-svg:focus {
+.input-number-button:focus {
   outline-style: none;
 }
 
-.search-form-svg:focus
-
-.search-form-svg-wrapper:focus {
+.input-number-button:focus .search-form-svg-wrapper {
   outline-style: none;
   box-shadow: 0 0 0 3px #83B3D3;
 }
@@ -1530,13 +1546,17 @@ body {
 .modal-information {
   display: block;
   position: relative;
-  margin-left: 5px;
+  margin: 0;
+  padding: 0;
   width: 25px;
   height: 25px;
   border-radius: 50%;
+  cursor: pointer;
+  border: none;
   background: #83B3D3;
 }
 
+.modal-information:hover,
 .modal-information:active {
   background-color: #68A2CA;
 }
@@ -1559,6 +1579,48 @@ body {
   top: 11px;
   left: 12px;
   background-color: #ffffff;
+}
+
+.tooltip {
+  position: relative;
+  margin-left: 5px;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  width: 256px;
+  box-sizing: border-box;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 1;
+  display: none;
+  margin-top: 15px;
+}
+
+.tooltip-text::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 0;
+  width: 19px;
+  height: 19px;
+  background-color: #333333;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center;
+}
+
+.modal-information:hover+.tooltip-text,
+.modal-information:focus+.tooltip-text {
+  display: block;
 }
 
 .search-form-button {

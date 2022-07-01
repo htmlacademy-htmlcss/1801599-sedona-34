@@ -610,6 +610,7 @@
         </section>
       </footer>
     </div>
+
     <div class="modal-container modal-container-close">
       <div class="modal modal-search">
         <button class="modal-close-button">
@@ -653,15 +654,15 @@
               </div>
             </div>
             <div class="field-group">
-              <label class="modal-label" for="search-checkin"
+              <label class="modal-label" for="search-checkout"
                 >Дата Выезда:</label
               >
               <div class="modal-field-wrapper">
                 <input
                   class="search-form-field search-form-field-date"
                   type="text"
-                  id="search-checkin"
-                  name="search-checkin"
+                  id="search-checkout"
+                  name="search-checkout"
                   placeholder="Укажите дату"
                   value="1 сентября 2021"
                 />
@@ -674,8 +675,9 @@
               <div class="field-group">
                 <label class="modal-label" for="search-adults">Взрослые:</label>
                 <div class="input-number-wrapper">
-                  <button
-                    class="search-form-svg-wrapper search-form-svg-wrapper-minus"
+                <button class="input-number-button input-number-button-minus" type="button">
+                  <span
+                    class="search-form-svg-wrapper"
                   >
                     <svg
                       class="search-form-svg"
@@ -685,16 +687,18 @@
                     >
                       <path d="M0 0v1h13V0H0Z" fill="#000" />
                     </svg>
-                  </button>
-                  <input
-                    class="search-form-field search-form-field-number"
-                    type="number"
-                    id="search-adults"
-                    name="search-adults"
-                    value="2"
-                  />
-                  <button
-                    class="search-form-svg-wrapper search-form-svg-wrapper-plus"
+                  </span>
+                </button>
+                <input
+                  class="search-form-field search-form-field-number"
+                  type="number"
+                  id="search-adults"
+                  name="search-adults"
+                  value="2"
+                />
+                <button class="input-number-button  input-number-button-plus" type="button">
+                  <span
+                    class="search-form-svg-wrapper"
                   >
                     <svg
                       class="search-form-svg"
@@ -704,19 +708,32 @@
                     >
                       <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />
                     </svg>
-                  </button>
-                </div>
+                  </span>
+                </button>
+              </div>
               </div>
               <div class="field-group">
                 <label
                   class="modal-label modal-label-with-information"
                   for="search-kids"
                   >Дети:
-                  <span class="modal-information"></span>
+                  <span class="tooltip">
+                    <button
+                      class="modal-information"
+                      type="button"
+                      aria-labelledby="tooltip-label"
+                    ></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label"
+                      >Укажите количество детей, которые будут с вами, возраст
+                      которых от 6 до 18 лет. Дети до 6 лет размещаются
+                      бесплатно.</span
+                    >
+                  </span>
                 </label>
                 <div class="input-number-wrapper">
-                  <button
-                    class="search-form-svg-wrapper search-form-svg-wrapper-minus"
+                <button class="input-number-button  input-number-button-minus" type="button">
+                  <span
+                    class="search-form-svg-wrapper"
                   >
                     <svg
                       class="search-form-svg"
@@ -726,16 +743,21 @@
                     >
                       <path d="M0 0v1h13V0H0Z" fill="#000" />
                     </svg>
-                  </button>
-                  <input
-                    class="search-form-field search-form-field-number"
-                    type="number"
-                    id="search-kids"
-                    name="search-kids"
-                    value="1"
-                  />
-                  <button
-                    class="search-form-svg-wrapper search-form-svg-wrapper-plus"
+                  </span>
+                </button>
+                <input
+                  class="search-form-field search-form-field-number"
+                  type="number"
+                  id="search-kids"
+                  name="search-kids"
+                  value="1"
+                />
+                <button
+                  class="input-number-button input-number-button-plus"
+                  type="button"
+                >
+                  <span
+                    class="search-form-svg-wrapper"
                   >
                     <svg
                       class="search-form-svg"
@@ -745,8 +767,9 @@
                     >
                       <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />
                     </svg>
-                  </button>
-                </div>
+                  </span>
+                </button>
+              </div>
               </div>
             </div>
             <button class="button button-blue search-form-button" type="submit">
