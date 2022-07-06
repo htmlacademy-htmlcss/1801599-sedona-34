@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
   </head>
 
   <body>
@@ -482,6 +483,7 @@
         </section>
 
         <section class="page-footer-bottom">
+          <h2 class="visually-hidden">Контактные данные</h2>
           <div class="page-footer-navigation">
             <section class="footer-social">
               <h2 class="visually-hidden">Ссылки на социальные сети</h2>
@@ -570,175 +572,6 @@
           </div>
         </section>
       </footer>
-    </div>
-
-    <div class="modal-container modal-container-close">
-      <div class="modal modal-search">
-        <button class="modal-close-button">
-          <span class="visually-hidden">Закрыть</span>
-          <svg
-            class="close-button-cross"
-            viewBox="0 0 13 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"
-              fill="#000"
-            />
-          </svg>
-        </button>
-        <section class="modal-content">
-          <h2 class="modal-title">поиск гостиницы в седоне</h2>
-
-          <form
-            class="search-form"
-            action="https://echo.htmlacademy.ru/"
-            method="get"
-          >
-            <div class="field-group">
-              <label class="modal-label" for="search-checkin"
-                >Дата Заезда:</label
-              >
-              <div class="modal-field-wrapper">
-                <input
-                  class="search-form-field search-form-field-date"
-                  type="text"
-                  id="search-checkin"
-                  name="search-checkin"
-                  placeholder="Укажите дату"
-                  value="27 апреля 2020"
-                />
-                <span class="modal-message modal-warning"
-                  >Мы не можем отправить вас в прошлое.</span
-                >
-              </div>
-            </div>
-            <div class="field-group">
-              <label class="modal-label" for="search-checkout"
-                >Дата Выезда:</label
-              >
-              <div class="modal-field-wrapper">
-                <input
-                  class="search-form-field search-form-field-date"
-                  type="text"
-                  id="search-checkout"
-                  name="search-checkout"
-                  placeholder="Укажите дату"
-                  value="1 сентября 2021"
-                />
-                <span class="modal-message"
-                  >На эти даты есть свободные номера. Пока есть.</span
-                >
-              </div>
-            </div>
-            <div class="field-group-number-wrapper">
-              <div class="field-group">
-                <label class="modal-label" for="search-adults">Взрослые:</label>
-                <div class="input-number-wrapper">
-                <button class="input-number-button input-number-button-minus" type="button">
-                  <span
-                    class="search-form-svg-wrapper"
-                  >
-                    <svg
-                      class="search-form-svg"
-                      viewBox="0 0 13 1"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M0 0v1h13V0H0Z" fill="#000" />
-                    </svg>
-                  </span>
-                </button>
-                <input
-                  class="search-form-field search-form-field-number"
-                  type="number"
-                  id="search-adults"
-                  name="search-adults"
-                  value="2"
-                />
-                <button class="input-number-button  input-number-button-plus" type="button">
-                  <span
-                    class="search-form-svg-wrapper"
-                  >
-                    <svg
-                      class="search-form-svg"
-                      viewBox="0 0 13 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-              </div>
-              <div class="field-group">
-                <label
-                  class="modal-label modal-label-with-information"
-                  for="search-kids"
-                  >Дети:
-                  <span class="tooltip">
-                    <button
-                      class="modal-information"
-                      type="button"
-                      aria-labelledby="tooltip-label"
-                    ></button>
-                    <span class="tooltip-text" role="tooltip" id="tooltip-label"
-                      >Укажите количество детей, которые будут с вами, возраст
-                      которых от 6 до 18 лет. Дети до 6 лет размещаются
-                      бесплатно.</span
-                    >
-                  </span>
-                </label>
-                <div class="input-number-wrapper">
-                <button class="input-number-button  input-number-button-minus" type="button">
-                  <span
-                    class="search-form-svg-wrapper"
-                  >
-                    <svg
-                      class="search-form-svg"
-                      viewBox="0 0 13 1"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M0 0v1h13V0H0Z" fill="#000" />
-                    </svg>
-                  </span>
-                </button>
-                <input
-                  class="search-form-field search-form-field-number"
-                  type="number"
-                  id="search-kids"
-                  name="search-kids"
-                  value="1"
-                />
-                <button
-                  class="input-number-button input-number-button-plus"
-                  type="button"
-                >
-                  <span
-                    class="search-form-svg-wrapper"
-                  >
-                    <svg
-                      class="search-form-svg"
-                      viewBox="0 0 13 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-              </div>
-            </div>
-            <button class="button button-blue search-form-button" type="submit">
-              найти
-            </button>
-          </form>
-        </section>
-      </div>
     </div>
   </body>
 </html>
