@@ -466,6 +466,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-height: 384px;
+  max-width: 400px;
+  word-wrap: break-word;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,7 +755,7 @@ body {
 }
 
 .phone {
-  width: 331px;
+  max-width: 380px;
 }
 
 .footer-phone {
@@ -1029,7 +1031,7 @@ body {
   outline-style: none;
   appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1220,10 +1222,11 @@ body {
 }
 
 .catalog-hotel-select {
+  width: 290px;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: 78px;
-  padding-right: 126px;
-  padding-left: 17px;
+  padding: 0 17px;
 
 }
 
@@ -1294,6 +1297,11 @@ body {
   margin-bottom: 16px;
 }
 
+.hotel-item-img:focus{
+  outline-style: none;
+  opacity: 0.6;
+}
+
 .hotel-title {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -1305,6 +1313,11 @@ body {
   line-height: 28px;
   text-decoration: none;
   color: #000000;
+}
+
+.hotel-title:focus {
+  outline: none;
+  opacity: 0.6;
 }
 
 .hotel-item-bottom {
@@ -1323,6 +1336,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  word-wrap: break-word;
 }
 
 .hotel-price {
@@ -1464,23 +1478,25 @@ body {
   color: #000000;
 }
 
-.selection-description {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .select-control {
+  width: 160px;
+  flex-grow: 0;
+  flex-shrink: 0;
   margin-left: 51px;
-  padding-right: 126px;
-  padding-left: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .hotel-list-footer-selection {
   width: 386px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
   margin-left: auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1691,6 +1707,8 @@ body {
 .search-form-field-number {
   max-width: 133px;
   text-align: center;
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .search-form-field-number::-webkit-outer-spin-button,
