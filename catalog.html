@@ -116,7 +116,7 @@
                           checked
                         />
                         <span class="control-mark"></span>
-                        <span>Бассейн</span></label
+                        <span class="control-description">Бассейн</span></label
                       >
                     </li>
                     <li class="catalog-filter-item">
@@ -128,7 +128,7 @@
                           checked
                         />
                         <span class="control-mark"></span>
-                        <span>Парковка</span>
+                        <span class="control-description">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
@@ -139,7 +139,7 @@
                           name="wifi"
                         />
                         <span class="control-mark"></span>
-                        <span>Wi-Fi</span>
+                        <span class="control-description">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -158,7 +158,7 @@
                           checked
                         />
                         <span class="control-mark"></span>
-                        <span>Гостиница</span>
+                        <span class="control-description">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
@@ -170,7 +170,7 @@
                           value="motel"
                         />
                         <span class="control-mark"></span>
-                        <span>Мотель</span></label
+                        <span class="control-description">Мотель</span></label
                       >
                     </li>
                     <li class="catalog-filter-item">
@@ -182,7 +182,9 @@
                           value="appartment"
                         />
                         <span class="control-mark"></span>
-                        <span>Апартаменты</span></label
+                        <span class="control-description"
+                          >Апартаменты</span
+                        ></label
                       >
                     </li>
                   </ul>
@@ -320,12 +322,12 @@
                   href="#"
                   >Подробнее</a
                 >
-                <a
+                <button
                   class="button button-favourites button-small button-blue"
-                  href="#"
+                  type="button"
                 >
                   в избранное
-                </a>
+                </button>
                 <span class="hotel-stars hotel-stars-four"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 8,5</span>
@@ -351,12 +353,12 @@
                   href="#"
                   >Подробнее</a
                 >
-                <a
+                <button
                   class="button button-favourites button-small button-favourits-added"
-                  href="#"
+                  type="button"
                 >
                   в избранном
-                </a>
+                </button>
                 <span class="hotel-stars hotel-stars-four"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 9,2</span>
@@ -382,12 +384,12 @@
                   href="#"
                   >Подробнее</a
                 >
-                <a
+                <button
                   class="button button-favourites button-small button-blue"
-                  href="#"
+                  type="button"
                 >
                   в избранное
-                </a>
+                </button>
                 <span class="hotel-stars hotel-stars-three"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 6,9</span>
@@ -412,12 +414,12 @@
                   href="#"
                   >Подробнее</a
                 >
-                <a
+                <button
                   class="button button-favourites button-small button-blue"
-                  href="#"
+                  type="button"
                 >
                   в избранное
-                </a>
+                </button>
                 <span class="hotel-stars hotel-stars-two"></span>
                 <span class="visually-hidden">Количество звезд у отеля</span>
                 <span class="hotel-rating">Рейтинг: 5,0</span>
@@ -448,14 +450,14 @@
               </ul>
             </div>
 
-              <label class="hotel-list-footer-selection">
-                <span>Гостиниц на странице:</span>
-                <select class="page-select select-control">
-                  <option value="4">4</option>
-                  <option value="6">6</option>
-                  <option value="8">8</option>
-                </select>
-              </label>
+            <label class="hotel-list-footer-selection">
+              <span>Гостиниц на странице:</span>
+              <select class="page-select select-control">
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+              </select>
+            </label>
           </div>
         </section>
       </main>
@@ -479,6 +481,7 @@
                 type="email"
                 name="email"
                 placeholder="Ваш e-mail"
+                required
               />
               <button
                 class="button subscription-button button-blue"

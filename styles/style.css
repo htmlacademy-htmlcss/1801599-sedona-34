@@ -63,12 +63,13 @@ body {
   cursor: pointer;
 }
 
-.button:active {
+.button:not([disabled]):active {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .button:disabled {
   background-color: #E5E5E5;
+  cursor: auto;
 }
 
 .button-small {
@@ -84,20 +85,20 @@ body {
   background-color: #82B3D3;
 }
 
-.button-brown:hover,
-.button-brown:focus {
+.button-brown:not([disabled]):hover,
+.button-brown:not([disabled]):focus {
   background-color: #615048;
   outline-style: none;
 }
 
-.button-blue:hover,
-.button-blue:focus {
+.button-blue:not([disabled]):hover,
+.button-blue:not([disabled]):focus {
   background-color: #68A2CA;
   outline-style: none;
 }
 
-.button-favourits-added:hover,
-.button-favourits-added:focus {
+.button-favourits-added::not([disabled])hover,
+.button-favourits-added::not([disabled])focus {
   background-color: #6C9E42;
   outline-style: none;
 }
@@ -124,18 +125,19 @@ body {
   -moz-appearance: none;
 }
 
-.page-select:hover,
-.page-select:focus {
+.page-select:not([disabled]):hover,
+.page-select:not([disabled]):focus {
   border-color: #68A2CA;
 }
 
-.page-select:active {
+.page-select:not([disabled]):active {
   border-color: #3F5E72;
 }
 
 .page-select:disabled {
   border-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
+  cursor: auto;
 }
 
 /* Шапка */
@@ -157,6 +159,10 @@ body {
   margin-right: 30px;
   margin-bottom: -5px;
   z-index: 1;
+}
+
+.page-header-logo-current {
+  cursor: auto;
 }
 
 .page-header-logo:focus {
@@ -203,6 +209,10 @@ body {
   width: 310px;
   margin-left: auto;
   list-style: none;
+}
+
+.navigation-link-current {
+  cursor: auto;
 }
 
 .navigation-link-current::after {
@@ -657,7 +667,7 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.subscription-email:hover {
+.subscription-email:not([disabled]):hover {
   background: #E6E6E6;
   color: #000000;
 }
@@ -670,9 +680,14 @@ body {
   outline-style: none;
 }
 
-.subscription-email:active {
+.subscription-email:not([disabled]):active {
   background: #FFFFFF;
   color: #000000;
+}
+
+.subscription-email:disabled {
+  opacity: 0.2;
+  cursor: auto;
 }
 
 .subscription-button {
@@ -862,7 +877,6 @@ body {
   margin: 0;
   padding: 0;
   margin-right: 10px;
-  cursor: pointer;
 }
 
 .breadcrumbs-link:hover,
@@ -957,18 +971,18 @@ body {
   border-radius: 4px;
 }
 
-.control:hover .control-mark {
+.control:not([disabled]):hover .control-mark {
   background: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:focus + .control-mark {
+.control-input:not([disabled]):focus + .control-mark {
   background: rgba(255, 255, 255, 0.6);
   -webkit-box-shadow: 0 0 0 3px #83B3D3;
           box-shadow: 0 0 0 3px #83B3D3;
   outline-style: none;
 }
 
-.control:active .control-mark {
+.control:not([disabled]):active .control-mark {
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -1000,6 +1014,26 @@ body {
   background-color: #3F5E72;
   border-radius: 50%;
   content: "";
+}
+
+.control-input[type="radio"]:disabled~.control-description {
+  opacity: 0.2;
+  cursor: auto;
+}
+
+.control-input[type="radio"]:disabled+.control-mark {
+  opacity: 0.2;
+  cursor: auto;
+}
+
+.control-input[type="checkbox"]:disabled~.control-description {
+  opacity: 0.2;
+  cursor: auto;
+}
+
+.control-input[type="checkbox"]:disabled+.control-mark {
+  opacity: 0.2;
+  cursor: auto;
 }
 
 .range-wrapper-inputs {
@@ -1040,7 +1074,7 @@ body {
   margin: 0;
 }
 
-.range-input:hover {
+.range-input:not([disabled]):hover {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1051,8 +1085,13 @@ body {
     0px 0px 0px 3px #81B3D2;
 }
 
-.range-input:active {
+.range-input:not([disabled]):active {
   background: #756257;
+}
+
+.range-input:disabled {
+  opacity: 0.2;
+  cursor: auto;
 }
 
 
@@ -1132,6 +1171,11 @@ body {
           box-shadow: 0px 0px 0 2px #83B3D3;
 }
 
+.range-toggle:disabled {
+  background-color: grey;
+  cursor: auto;
+}
+
 .toggle-min {
   top: -8px;
 }
@@ -1194,6 +1238,11 @@ body {
 
 .catalog-filter-reset:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-filter-reset:disabled {
+  color: rgba(255, 255, 255, 0.2);
+  cursor: auto;
 }
 
 /* Карточки каталога */
@@ -1687,21 +1736,26 @@ body {
   background-position: right 19px center;
 }
 
-.search-form-field-date:hover,
-.search-form-field-date:focus {
+.search-form-field-date:not([disabled]):hover,
+.search-form-field-date:not([disabled]):focus {
   background-color: #E6E6E6;
 }
 
-.search-form-field-date:focus-visible {
+.search-form-field-date:not([disabled]):focus-visible {
   outline-style: none;
   -webkit-box-shadow: 0 0 0 3px #83B3D3;
           box-shadow: 0 0 0 3px #83B3D3;
 }
 
-.search-form-field-date:active {
+.search-form-field-date:not([disabled]):active {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0 0 0 2px #000000 inset;
           box-shadow: 0 0 0 2px #000000 inset;
+}
+
+.search-form-field:disabled {
+  opacity: 0.2;
+  cursor: auto;
 }
 
 .search-form-field-number {
@@ -1899,9 +1953,14 @@ body {
           transform-origin: center;
 }
 
-.modal-information:hover+.tooltip-text,
-.modal-information:focus+.tooltip-text {
+.modal-information:not([disabled]):hover+.tooltip-text,
+.modal-information:not([disabled]):focus+.tooltip-text {
   display: block;
+}
+
+.modal-information:disabled {
+  opacity: 0.2;
+  cursor: auto;
 }
 
 .search-form-button {
