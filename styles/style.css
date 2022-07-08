@@ -333,6 +333,9 @@ body {
 }
 
 .promo-image {
+  position: relative;
+  padding-top: 51px;
+  padding-bottom: 82px;
   background-image: url("../images/promo-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -346,14 +349,16 @@ body {
   margin: 0 auto;
 }
 
-
-.promo-image-bottom {
-  padding-top: 51px;
-  padding-bottom: 82px;
-  margin-bottom: -1px;
+.promo-image::after {
+  content: "";
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  bottom: -1px;
+  left: 0;
   background-image: url("../images/promo-image-triangles.svg");
-  background-size: auto auto;
-  background-position: center bottom 1px;
+  background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -1763,6 +1768,14 @@ body {
   text-align: center;
   appearance: none;
   -moz-appearance: textfield;
+}
+
+.search-form-field-number::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.search-form-field-number::-moz-placeholder {
+  color: #000000;
 }
 
 .search-form-field-number::-webkit-outer-spin-button,

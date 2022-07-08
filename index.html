@@ -15,7 +15,7 @@
   <body>
     <div class="size-fix">
       <header class="page-header">
-        <a class="page-header-logo page-header-logo-current" href="index.html">
+        <a class="page-header-logo page-header-logo-current" href="#">
           <img
             class="page-header-logo-img"
             alt="Логотип."
@@ -27,9 +27,7 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a
-                class="navigation-link navigation-link-current"
-                href="index.html"
+              <a class="navigation-link navigation-link-current" href="#"
                 >Главная</a
               >
             </li>
@@ -72,16 +70,13 @@
       <main class="main-container main-index">
         <section class="promo-image">
           <h1 class="visually-hidden">Сайт города Седона.</h1>
-
-          <div class="promo-image-bottom">
-            <img
-              class="promo-text"
-              src="images/welcome-to-sedona-because-logo.svg"
-              alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!"
-              width="458"
-              height="352"
-            />
-          </div>
+          <img
+            class="promo-text"
+            src="images/welcome-to-sedona-because-logo.svg"
+            alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!"
+            width="458"
+            height="352"
+          />
         </section>
 
         <section class="promo">
@@ -221,13 +216,18 @@
               action="https://echo.htmlacademy.ru/"
               method="post"
             >
+              <label class="visually-hidden" for="email"
+                >Введите ваш email</label
+              >
               <input
                 class="subscription-email"
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Ваш e-mail"
                 required
               />
+
               <button
                 class="button subscription-button button-blue"
                 type="submit"
@@ -343,7 +343,7 @@
 
     <div class="modal-container modal-container-close">
       <div class="modal modal-search">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
           <svg
             class="close-button-cross"
@@ -427,7 +427,8 @@
                     type="number"
                     id="search-adults"
                     name="search-adults"
-                    value="2"
+                    placeholder="2"
+                    min="1"
                     required
                   />
                   <button
@@ -465,6 +466,7 @@
                     >
                   </span>
                 </label>
+
                 <div class="input-number-wrapper">
                   <button
                     class="input-number-button input-number-button-minus"
@@ -486,7 +488,8 @@
                     type="number"
                     id="search-kids"
                     name="search-kids"
-                    value="1"
+                    placeholder="1"
+                    min="0"
                   />
                   <button
                     class="input-number-button input-number-button-plus"

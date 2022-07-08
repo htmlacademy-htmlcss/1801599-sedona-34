@@ -35,7 +35,7 @@
             <li class="navigation-item">
               <a
                 class="navigation-link navigation-link-current"
-                href="catalog.html"
+                href="#"
                 >Гостиницы</a
               >
             </li>
@@ -198,6 +198,7 @@
                         type="number"
                         value="0"
                         name="min-price"
+                        min="0"
                       />
                     </label>
                     <label class="catalog-filter-label">
@@ -212,12 +213,12 @@
                   <div class="range">
                     <div class="range-scale">
                       <div class="range-bar" style="left: 0px; width: 228px">
-                        <button class="range-toggle toggle-min">
+                        <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden"
                             >Изменить минимальную цену.</span
                           >
                         </button>
-                        <button class="range-toggle toggle-max">
+                        <button class="range-toggle toggle-max" type="button">
                           <span class="visually-hidden"
                             >Изменить максимальную цену.</span
                           >
@@ -476,10 +477,12 @@
               action="https://echo.htmlacademy.ru/"
               method="post"
             >
+            <label class="visually-hidden" for="email">Введите ваш email</label>
               <input
                 class="subscription-email"
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Ваш e-mail"
                 required
               />
